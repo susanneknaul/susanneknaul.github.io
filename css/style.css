@@ -1,0 +1,186 @@
+html {
+	overflow-y: scroll;	
+}
+
+
+body{
+	letter-spacing: -0.015em;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+/* body::before {
+	content: "";
+	background-image: url(../images/zeitung_blurry.jpg);
+	opacity: 0.1;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+} */
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	/* margin-block: 25px; */
+}
+
+a{
+	color: black;
+	text-decoration: none;
+	width: 100%;
+}
+
+
+
+
+
+/* Banner */
+#banner{
+	width: fit-content;
+}
+
+#banner h2{
+	font-family: Franklin Gothic;
+	font-size: 60px;
+	color: rgba(0, 0, 0, .6);
+	margin-inline: 5vw;
+	width: fit-content;
+	margin-block: clamp(10px, 50px, 4vw);
+}
+
+.titletext{
+	font-size: 23px;
+	margin-inline: 8vw;
+	color: rgba(0, 0, 0, .6);
+}
+
+
+
+.service{
+	font-size: 22px;
+	margin-left: 25px;
+
+	& a:hover{
+		text-decoration: underline;
+	}
+}
+
+
+@media(min-width: 400px){
+	.services{
+		display: flex;
+		justify-content: end;
+		margin-top: 55px;
+	}
+	.service{
+		margin-inline: 4px;
+		padding: 2px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 4px;
+	margin-block: 40px;
+	margin-inline: 4px;
+}
+
+.item{
+	background-color: white;
+	border-radius: 5px;
+	outline: 1px solid rgba(0, 0, 0, .2);
+	outline-offset: -1px;
+	transition: .1s ease;
+
+	& *{
+		padding-inline: 10px;
+	}
+	& img{
+		width:calc(100% - 20px);
+		border-radius: 5px;
+	}
+}
+
+.item:hover{
+	background-color: rgba(0, 0, 0, .1);
+}
+
+
+
+
+
+
+.center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.uber{
+	display: flex;
+	margin-top: 40px;
+
+	& *{
+		padding: 20px;
+	}
+	& img{
+		width: 200px;
+		object-fit: contain;
+	}
+	& p{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.uber{
+		flex-direction: column;
+	}
+}
+
+
+
+
+.contact{
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	flex-direction: column;
+
+	padding: 20px;
+
+	font-size: 20px;
+	transition: .2s ease;
+	& a{
+		margin: 5px;
+		width: fit-content;
+	}
+	& a:hover{
+		color: rgb(93, 185, 255);
+	}
+}
+
+
+.copyright{
+	padding: 20px;
+	text-align: center;
+	font-size: 15px;
+	opacity: .6;
+}
+
